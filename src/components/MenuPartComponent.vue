@@ -5,8 +5,8 @@
       :key="item.name"
       :class="{ 'show' : findCategory(item) }">
       <span
-        v-if="item.childs && item.childs.length"
-        @click="toggleChilds(item)">
+        v-if="item.subcategories && item.subcategories.length"
+        @click="toggleSubcategories(item)">
         <template v-if="!findCategory(item)">
           +
         </template>
@@ -16,8 +16,8 @@
       </span>
       {{ item.name }}
       <menu-part-component
-        v-if="item.childs && item.childs.length"
-        :items="item.childs"
+        v-if="item.subcategories && item.subcategories.length"
+        :items="item.subcategories"
         :openCategories.sync="openCategories"></menu-part-component>
     </li>
   </ul>
@@ -39,11 +39,14 @@ export default {
     }
   },
   methods: {
-    toggleChilds(category) {
+    toggleSubcategories(category) {
       EventBus.$emit('toggle-category', category)
     },
     findCategory(category) {
-      return this.openCategories.find(item => item == category)
+      if (this.openCategories && this.openCategories.length) {
+        return this.openCategories.find(item => item == category)
+      }
+      return false
     }
   }
 }

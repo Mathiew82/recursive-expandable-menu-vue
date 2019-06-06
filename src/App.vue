@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <div class="tac">
+      <img alt="Vue logo" src="./assets/logo.png">
+    </div>
     <p></p>
     <menu-part-component
       :items="categories"
@@ -22,10 +24,10 @@ export default {
       categories: [
         {
           name: 'Categoría 1',
-          childs: [
+          subcategories: [
             {
               name: 'Subcategoría 1.1',
-              childs: [
+              subcategories: [
                 {
                   name: 'Subcategoría Hija 1.1.1'
                 },
@@ -39,7 +41,7 @@ export default {
             },
             {
               name: 'Subcategoría 1.2',
-              childs: [
+              subcategories: [
                 {
                   name: 'Subcategoría Hija 1.2.1'
                 },
@@ -53,16 +55,16 @@ export default {
             },
             {
               name: 'Subcategoría 1.3',
-              childs: []
+              subcategories: []
             }
           ]
         },
         {
           name: 'Categoría 2',
-          childs: [
+          subcategories: [
             {
               name: 'Subcategoría 2.1',
-              childs: [
+              subcategories: [
                 {
                   name: 'Subcategoría Hija 2.1.1'
                 },
@@ -76,7 +78,7 @@ export default {
             },
             {
               name: 'Subcategoría 2.2',
-              childs: [
+              subcategories: [
                 {
                   name: 'Subcategoría Hija 2.2.1'
                 },
@@ -90,7 +92,7 @@ export default {
             },
             {
               name: 'Subcategoría 2.3',
-              childs: []
+              subcategories: []
             }
           ]
         }
@@ -116,15 +118,11 @@ export default {
 <style>
 body {
   background-color: #222;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   padding: 0 20%;
 }
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.tac {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
