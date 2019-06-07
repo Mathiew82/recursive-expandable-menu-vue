@@ -1,5 +1,7 @@
 # Recursive Expandable Menu Vue
 
+![](src/assets/demo_image.gif)
+
 ## Project setup
 
 #### Clone the repository in your projects folder:
