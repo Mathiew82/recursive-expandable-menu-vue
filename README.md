@@ -1,26 +1,18 @@
-# recursive-expandable-menu-vue
+# Recursive Expandable Menu Vue
 
 ## Project setup
+
+#### Clone the repository in your projects folder:
+```
+git clone https://github.com/Mathiew82/recursive-expandable-menu-vue.git
+```
+
+#### Install project dependencies:
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Launch the application
 ```
 yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
 ```
